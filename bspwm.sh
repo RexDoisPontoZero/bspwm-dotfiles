@@ -16,3 +16,4 @@ cp -r .local/bin/* ~/.local/bin
 chmod -R +x ~/.local/bin
 betterlockscreen -u ~/.config/bspwm/backgrounds/wave.png
 sudo systemctl enable betterlockscreen@$USER.service
+echo Done

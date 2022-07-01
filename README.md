@@ -21,3 +21,8 @@ This is based on <a href="https://github.com/theCode-Breaker/bspwm-dotfiles">the
 wget https://raw.githubusercontent.com/RexDoisPontoZero/bspwm-dotfiles/main/bspwm.sh 
 bash bspwm.sh
 ```
+### Post-install
+Check out your bspwmrc file with the text editor of your choice (I recommend micro, as presented in the command down bellow). Most problems will be fixed after configuring xrandr.
+```
+micro ~/.config/bspwm/bspwmrc
+```

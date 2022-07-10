@@ -1,11 +1,7 @@
 #! /bin/sh
 
-# xrandr (monitor output, resolution and refresh rate) - if you're not sure on which output your monitor is on, type xrandr on your terminal
-xrandr --output DP-4 --mode 1920x1080 --rate 165
-
-
 # wallpaper
-feh --no-fehbg --bg-scale $HOME/.config/bspwm/backgrounds/wave.png
+feh --no-fehbg --bg-scale $HOME/.config/bspwm/backgrounds/tropic_island_night.jpg 
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 $HOME/.config/bspwm/polybar/launch.sh
@@ -67,6 +63,9 @@ picom --experimental-backends &
 # Java applications
 wmname LG3D
 export _JAVA_AWT_WM_NONREPARENTING=1
+
+# xrandr
+xrandr --output DP-4 --mode 1920x1080 --rate 165
 
 # rsync
 rsync -var /home/rex/.config /home/rex/.backups&&rsync -var /home/rex/.minecraft /home/rex/.backups&&rsync -var /home/rex/.mine-server /home/rex/.backups

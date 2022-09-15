@@ -3,24 +3,26 @@
 type=custom/text
 content = 
 content-font = 2
-content-foreground= ${color.purple}
+content-foreground= ${color.teal}
 content-padding = 1
 click-left=rofi -show drun
 
-#[module/cpu]
-#type = internal/cpu
-#interval = 2
-#format = <label>
-#format-prefix = " "
-#format-padding = 1
+[module/cpu]
+type = internal/cpu
+interval = 2
+format = <label>
+format-foreground= ${color.mauve}
+format-prefix = " "
+format-padding = 1
 
-#[module/memory]
-#type = internal/memory
-#interval = 2
-#format = <label>
-#format-prefix = " "
-#label = "%mb_used%"
-#format-padding = 1
+[module/memory]
+type = internal/memory
+interval = 2
+format = <label>
+format-foreground= ${color.yellow}
+format-prefix = " "
+label = "%mb_used%"
+format-padding = 1
 
 #[module/filesystem]
 #type = internal/fs
@@ -50,7 +52,7 @@ tail = true
 interval = 1
 ; prefix symbol is shown before the text
 format-prefix = "   "
-format-foreground= ${color.purple}
+format-foreground= ${color.green}
 format-font = 2
 format = <label>
 exec = ~/.config/bspwm/polybar/scroll_spotify_status.sh
@@ -58,7 +60,7 @@ exec = ~/.config/bspwm/polybar/scroll_spotify_status.sh
 [module/spotify-prev]
 type = custom/script
 exec = echo " ﭢ "
-format-foreground= ${color.purple}
+format-foreground= ${color.green}
 format-font = 2
 format = <label>
 click-left = playerctl previous
@@ -67,14 +69,14 @@ click-left = playerctl previous
 type = custom/ipc
 hook-0 = echo " "
 hook-1 = echo " "
-format-foreground= ${color.purple}
+format-foreground= ${color.green}
 format-font = 2
 initial = 1
 click-left = playerctl play-pause
 
 [module/spotify-next]
 type = custom/script
-format-foreground= ${color.purple}
+format-foreground= ${color.green}
 format-font = 2
 exec = echo "ﭠ "
 format = <label>
@@ -103,13 +105,13 @@ reverse-scroll = true
 format = <label-state> <label-mode>
 
 label-focused = %name%
-label-focused-foreground = ${color.purple}
-label-focused-underline =  ${color.purple}
+label-focused-foreground = ${color.green}
+label-focused-underline =  ${color.green}
 label-focused-padding = 1
 
 label-occupied = %name%
-label-occupied-foreground = ${color.green}
-label-occupied-underline = ${color.green}
+label-occupied-foreground = ${color.purple}
+label-occupied-underline = ${color.purple}
 label-occupied-padding = 1
 
 label-urgent = %name%
@@ -173,6 +175,7 @@ ramp-volume-1 = 奔
 ramp-volume-2 = 墳
 ramp-headphones-0 = 
 ramp-headphones-1 = 
+format-volume-foreground= ${color.rosewater}
 
 [module/brightness]
 type = internal/backlight

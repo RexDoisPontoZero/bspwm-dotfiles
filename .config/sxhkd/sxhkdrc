@@ -4,8 +4,8 @@ super + Escape
 
 # toggle picom
 super + shift + q
-    if pgrep picom; then pkill picom; else picom --experimental-backends; fi
-
+    if pgrep picom; killall picom; else; picom --experimental-backends; end
+    
 # start picom
 super + q
     bspc node -c

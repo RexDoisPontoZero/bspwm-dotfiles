@@ -14,6 +14,6 @@ cp .zshrc-personal ~
 mkdir ~/.local/bin
 cp -r .local/bin/* ~/.local/bin
 chmod -R +x ~/.local/bin
-betterlockscreen -u ~/.config/bspwm/backgrounds/wave.png
+betterlockscreen -u ~/.config/bspwm/backgrounds/tropic_island_night.png
 sudo systemctl enable betterlockscreen@$USER.service
 echo Done

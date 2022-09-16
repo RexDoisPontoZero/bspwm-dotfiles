@@ -4,7 +4,7 @@ type=custom/text
 content = 
 content-font = 2
 content-foreground= ${color.teal}
-content-padding = 1
+content-padding = 2
 click-left=rofi -show drun
 
 [module/cpu]
@@ -123,14 +123,14 @@ label-empty = %name%
 label-empty-foreground = ${color.foreground}
 label-empty-padding = 1
 
-label-monocle = "[M]"
-label-tiled = "[]="
-label-floating = ", ><>"
-label-pseudotiled = ", P"
-label-fullscreen = ", F"
-label-locked = " | L"
-label-sticky = " | S"
-label-private = " | Private"
+#label-monocle = "[M]"
+#label-tiled = "[]="
+#label-floating = ", ><>"
+#label-pseudotiled = ", P"
+#label-fullscreen = ", F"
+#label-locked = " | L"
+#label-sticky = " | S"
+#label-private = " | Private"
 
 
 [module/battery]
@@ -196,9 +196,10 @@ format-padding = 1
 
 [module/time]
 type = internal/date
-time = "%a %d/%m/%y %H:%M:%S"
+#time = "%a %d/%m/%y %H:%M:%S"
+time = "%H:%M:%S"
 format = <label>
-format-prefix = " "
+#format-prefix = " "
 label = %time%
 format-padding = 1
 

@@ -20,9 +20,6 @@ env:
 
 ## Terminal window settings
 window:
-  dimensions:
-    columns: 82
-    lines: 25
 
   padding:
     x: 12

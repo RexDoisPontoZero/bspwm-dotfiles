@@ -28,7 +28,7 @@ function fish_prompt
   # Output the prompt, left to right
 
   # Add a newline before new prompts
-  echo -e ''
+  #echo -e ''
 
   # Display [venvname] if in a virtualenv
   if set -q VIRTUAL_ENV

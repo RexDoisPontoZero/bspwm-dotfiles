@@ -1,10 +1,13 @@
 #! /bin/sh
 
+# xrandr
+xrandr --output DP-4 --mode 1920x1080 --rate 165
+
+
 # wallpaper
 feh --no-fehbg --bg-scale $HOME/.config/bspwm/backgrounds/girl_vibe.jpg 
 
 pgrep -x sxhkd > /dev/null || sxhkd &
-$HOME/.config/bspwm/polybar/launch.sh
 
 bspc monitor -d 1 2 3 4 5 6
 
@@ -64,11 +67,12 @@ picom --experimental-backends &
 wmname LG3D
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-# xrandr
-xrandr --output DP-4 --mode 1920x1080 --rate 165
 
 # rsync
 rsync -var /home/rex/.config /home/rex/.backups&&rsync -var /home/rex/.minecraft /home/rex/.backups&&rsync -var /home/rex/.mine-server /home/rex/.backups
 
 # gnome-keyring
-gnome-keyring-daemon -s
+gnome-keyring-daemon -s & xdo raise -N Polybar
+
+
+$HOME/.config/bspwm/polybar/launch.sh

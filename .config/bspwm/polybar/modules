@@ -3,7 +3,7 @@
 type=custom/text
 content =  
 content-font = 2
-content-foreground= ${color.teal}
+content-foreground= ${color.maincolor}
 content-padding = 1
 click-left=rofi -show drun
 
@@ -11,7 +11,7 @@ click-left=rofi -show drun
 type = internal/cpu
 interval = 2
 format = <label>
-format-foreground= ${color.mauve}
+format-foreground= ${color.maincolor}
 format-prefix = " "
 format-padding = 1
 
@@ -19,7 +19,7 @@ format-padding = 1
 type = internal/memory
 interval = 2
 format = <label>
-format-foreground= ${color.yellow}
+format-foreground= ${color.maincolor}
 format-prefix = " "
 label = "%mb_used%"
 format-padding = 1
@@ -52,7 +52,7 @@ tail = true
 interval = 1
 ; prefix symbol is shown before the text
 format-prefix = "   "
-format-foreground= ${color.green}
+format-foreground= ${color.maincolor}
 format-font = 2
 format = <label>
 exec = ~/.config/bspwm/polybar/scroll_spotify_status.sh
@@ -60,7 +60,7 @@ exec = ~/.config/bspwm/polybar/scroll_spotify_status.sh
 [module/spotify-prev]
 type = custom/script
 exec = echo " ﭢ "
-format-foreground= ${color.green}
+format-foreground= ${color.maincolor}
 format-font = 2
 format = <label>
 click-left = playerctl previous
@@ -69,32 +69,18 @@ click-left = playerctl previous
 type = custom/ipc
 hook-0 = echo " "
 hook-1 = echo " "
-format-foreground= ${color.green}
+format-foreground= ${color.maincolor}
 format-font = 2
 initial = 1
 click-left = playerctl play-pause
 
 [module/spotify-next]
 type = custom/script
-format-foreground= ${color.green}
+format-foreground= ${color.maincolor}
 format-font = 2
 exec = echo "ﭠ "
 format = <label>
 click-left = playerctl next
-
-#[module/rebootbutton]
-#type=custom/text
-#content = 
-#content-font = 2
-#content-foreground= ${color.red}
-#content-padding = 1
-#click-left=rsync -var /home/rex/.config /home/rex/.backups&&rsync -var /home/rex/.minecraft /home/rex/.backups&&rsync -var /home/rex/.mine-server /home/rex/.backups&&reboot
-
-#[module/my-text-label]
-#type = custom/text
-#content = bspwm
-#content-font = 2
-#content-padding = 1
 
 [module/bspwm]
 type = internal/bspwm
@@ -105,13 +91,13 @@ reverse-scroll = true
 format = <label-state> <label-mode>
 
 label-focused = %name%
-label-focused-foreground = ${color.green}
-label-focused-underline =  ${color.green}
+label-focused-foreground = ${color.maincolor}
+label-focused-underline =  ${color.maincolor}
 label-focused-padding = 1
 
 label-occupied = %name%
-label-occupied-foreground = ${color.purple}
-label-occupied-underline = ${color.purple}
+label-occupied-foreground = ${color.foreground}
+label-occupied-underline = ${color.foreground}
 label-occupied-padding = 1
 
 label-urgent = %name%
@@ -175,7 +161,7 @@ ramp-volume-1 = 奔
 ramp-volume-2 = 墳
 ramp-headphones-0 = 
 ramp-headphones-1 = 
-format-volume-foreground= ${color.rosewater}
+format-volume-foreground= ${color.maincolor}
 
 [module/brightness]
 type = internal/backlight
@@ -208,5 +194,5 @@ type = custom/text
 content = 
 content-font = 2
 content-padding = 1
-content-foreground = ${color.red}
+content-foreground = ${color.maincolor}
 click-left = $HOME/.local/bin/powermenu

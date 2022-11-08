@@ -14,9 +14,9 @@ super + q
 super + Return
     alacritty
 
-# Launch Nautilus
+# Launch Nemo
 super + e
-    nautilus
+    nemo
 
 #App Launcher
 alt + F1

@@ -1,0 +1,67 @@
+[global/wm]
+include-file = $HOME/.config/bspwm/polybar/colors
+include-file = $HOME/.config/bspwm/polybar/modules
+include-file = $HOME/.config/bspwm/polybar/system
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[bar/bar]
+wm-restack = bspwm
+bottom = true
+fixed-center = false
+enable-ipc = true
+background = ${color.background}
+foreground = ${color.foreground}
+radius = 12
+font-0 = "JetBrainsMono Nerd Font:size=10.5;3"
+font-1 = "JetBrainsMono Nerd Font:size=14;4"
+modules-left= launcher cpu memory filesystem spotify spotify-prev spotify-play-pause spotify-next
+width = 23%
+height = 30
+border-size = 4
+border-color = ${color.background}
+line-size = 2
+offset-x = 0.25%
+offset-y = 0.5%
+#tray-position = right
+
+[bar/middle]
+wm-restack = bspwm
+bottom = true
+fixed-center = true
+enable-ipc = true
+background = ${color.background}
+foreground = ${color.foreground}
+radius = 12
+font-0 = "JetBrainsMono Nerd Font:size=10.5;3"
+font-1 = "JetBrainsMono Nerd Font:size=14;4"
+modules-center = my-text-label bspwm
+width = 15%
+height = 30
+border-size = 4
+border-color = ${color.background}
+line-size = 2
+offset-x = 42.5%
+offset-y = 0.5%
+#tray-position = right
+
+[bar/right]
+wm-restack = bspwm
+bottom = true
+fixed-center = false
+enable-ipc = true
+background = ${color.background}
+foreground = ${color.foreground}
+radius = 12
+font-0 = "JetBrainsMono Nerd Font:size=10.5;3"
+font-1 = "JetBrainsMono Nerd Font:size=14;4"
+modules-right = battery volume brightness time rebootbutton powermenu
+width = 23%
+height = 30
+border-size = 4
+border-color = ${color.background}
+line-size = 2
+offset-x = 76.75%
+offset-y = 0.5%
+tray-position = right
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

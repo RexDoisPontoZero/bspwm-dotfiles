@@ -5,7 +5,7 @@ xrandr --output DP-4 --mode 1920x1080 --rate 165
 
 
 # wallpaper
-feh --no-fehbg --bg-scale $HOME/.config/bspwm/backgrounds/wave.png
+feh --no-fehbg --bg-scale $HOME/.config/bspwm/backgrounds/solar-ascii.png
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
@@ -78,3 +78,5 @@ gnome-keyring-daemon -s & xdo raise -N Polybar
 $HOME/.config/bspwm/polybar/launch.sh
 
 setxkbmap br
+
+xhost + local:
